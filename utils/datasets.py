@@ -23,6 +23,9 @@ from tqdm import tqdm
 from utils.general import xyxy2xywh, xywh2xyxy, xywhn2xyxy, clean_str
 from utils.torch_utils import torch_distributed_zero_first
 
+from PIL import JpegImagePlugin
+JpegImagePlugin._getmp = lambda x: None
+
 # Parameters
 help_url = 'https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data'
 img_formats = ['bmp', 'jpg', 'jpeg', 'png', 'tif', 'tiff', 'dng']  # acceptable image suffixes
